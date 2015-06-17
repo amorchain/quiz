@@ -2,9 +2,17 @@
 <html LANG="en">
 
 <head>
-  <meta charset="utf-8">
-  <title> -- Preguntas / Quiz -- </title>
-  <link rel="stylesheet" href="../public/stylesheets/style.css" />
+  <meta charset="utf-8"><title> -- Preguntas / Quiz -- </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" 
+		type="text/css" 
+		media="only screen and (min-width: 530px) and (min-device-width: 481px)"
+		href="/stylesheets/wide.css" />
+  <link rel="stylesheet" 
+		type="text/css" 
+		media="only screen and (max-width: 480px)"
+		href="/stylesheets/smartphone.css" />
+  
 </head>
 
 
@@ -13,13 +21,13 @@
 <div id="page-wrap">
     <!-- HEADER -->
 	<header class="main" id="h1">
-        <h2 Quiz: El juego de las preguntas</h2>
+        <h2> Quiz: El juego de las preguntas ¿?</h2>
 	</header>
 	
     <!-- NAV -->
 	<nav class="main" id="n1" role="navigation">
 		<span><a href="/">Inicio</a></span>
-        <span><a href="/quizes/question">Preguntas</a></span>
+        <span><a href="./quizes/question">Preguntas</a></span>
 	</nav>
 	
 	 <!-- SECTION -->
@@ -30,11 +38,9 @@
 	<!-- FOOTER -->
 	<footer class="main" id="f1">
 		</br>
-        <a href="https://github.com/amorchain/quiz"> Link to My Github Account </a>
-		</br>
-        <a href="author.ejs"> Autor </a>
-		
-	
+        <a href="https://github.com/amorchain/quiz" target="blank"> Link to My Github Account </a>
+		</br></br>
+        <a href="./author"> Author </a>
 	</footer>
 	
 </div>

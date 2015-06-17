@@ -3,18 +3,22 @@ var router = express.Router();
 
 var quizController = require('../controllers/quiz_controller');
 
+var creditsController = require('../controllers/credits_controller');
+
+router.get('/author', creditsController.credits);
+
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'QUIZ' });
 });
 
 /* GET author. */
-router.get('/', function(req, res) {
-  res.render('author', { title: 'Autor del Programa' });
+router.get('./author', function (req, res, next) {
+  res.render('author', {});
 });
 
-router.get('/quize/question', quizController.question);
-router.get('/quize/answer', quizController.answer);
+router.get('/quizes/question', quizController.question);
+router.get('/quizes/answer', quizController.answer);
 
 
 module.exports = router;
