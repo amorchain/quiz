@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 });
 
 /* GET author. */
-router.get('./author', function (req, res, next) {
+router.get('/author', function (req, res, next) {
   res.render('author', {});
 });
 

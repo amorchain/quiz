@@ -28,7 +28,9 @@ app.use(function(req, res, next) {
   next();    
 });
 
-
+// view engine set up
+app.set('author', path.join(__dirname, 'author'));
+app.set('author engine', 'ejs');
 
 // view engine set up
 app.set('views', path.join(__dirname, 'views'));
