@@ -7,6 +7,12 @@ var creditsController = require('../controllers/credits_controller');
 
 router.get('/author', creditsController.credits);
 
+// Definición de rutas de /quizes
+router.get('/quizes', 			              quizController.index);
+router.get('/quizes/:quizId(\\d+)',	          quizController.show);
+router.get('/quizes/:quizId(\\d+)/answer',    quizController.answer);
+
+
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'QUIZ' });
