@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+  <body>
+    <h1>Bienvenido a <%= title %></h1>
+    <p>! El portal donde puede crear sus propios juegos ! </p>
+	<br />
+	<p><a href="/quizes/question"> Comience a Jugar...:D </a></p>
+	
+	<table>
+	<% var i; for (i=0; i < quizes.length; i++) { %>
+		<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>      
+    <% } %>			
+	</table>
+  </body>
+</html>

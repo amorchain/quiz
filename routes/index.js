@@ -26,12 +26,8 @@ router.get('/author', function (req, res, next) {
   res.render('author', {});
 });
 
-/*
-router.get('/quizes/:quizId', quizController.question);
-router.get('/quizes/:quizId/answer', quizController.answer);
 
 // router.get('/quizes/question', quizController.question);
 // router.get('/quizes/answer', quizController.answer);
-*/
 
 module.exports = router;

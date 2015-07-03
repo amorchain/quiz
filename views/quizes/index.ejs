@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  
-  <body>
-    <h1>Bienvenido a <%= title %></h1>
-    <p>! El portal donde puede crear sus propios juegos ! </p>
-	<br />
-	<p><a href="/quizes/question"> Comience a Jugar... </a></p>
-	
+<head>
+  <meta charset="utf-8"><title> Quiz -- </title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+	<h1>Preguntas -- Quiz ¿? </h1><br>
+	<div align="center">
 	<table>
 	<% var i; for (i=0; i < quizes.length; i++) { %>
-		<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>      
+		<tr><td align="center"><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>      
     <% } %>			
 	</table>
-  </body>
+	</div>
+
+	</body>
 </html>
