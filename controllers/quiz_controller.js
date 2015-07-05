@@ -1,5 +1,3 @@
-// quiz_controller.js
-
 var models = require('../models/models.js');
 
 // Autoload - factoriza el codigo si ruta incluye :quiz/Id
@@ -12,23 +10,22 @@ exports.load = function(req, res, next, quizId) {
 			} else  { next (new Error('No existe quizId= ' + quizId)); }	
 		}
 	).catch(function(error) { next(error);});
-};		
+};
 
-// GET / QUIZES
+
+// GET /quizes
 exports.index = function(req, res) {
 	models.Quiz.findAll ().then(
 		function(quizes) {
 			res.render('quizes/index', { quizes: quizes} );
 		}
-	).catch(function(error) { next(error);});
+	).catch(function(error) { next(error);})
 };
 
 
-// GET /quizes/ :id 
+// GET /quizes/:id 
 exports.show = function(req, res) {
-	// models.Quiz.find(req.params.quizId).then(function(quiz) {
-		res.render('quizes/show', { quiz: req.quiz });
-	//})
+	res.render('quizes/show', { quiz: req.quiz });
 };	
 
 
@@ -38,5 +35,5 @@ exports.answer = function(req, res) {
 	if	(req.query.respuesta === req.quiz.respuesta) {
 		resultado = 'Correcto';
 	}	
-	res.render('quizes/answer', { quiz: req.quiz, respuesta: resultado});
+	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});	
 };

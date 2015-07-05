@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"><title> Quiz -- </title>
+  <meta charset="utf-8"><title> Búsqueda / Quiz -- </title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
 <body>
-	<h1>Preguntas -- Quiz ¿...? </h1><br>
+	<h1>Preguntas -- Quiz ¿? </h1><br>
 	<div align="center">
 	<table>
 	<% var i; for (i=0; i < quizes.length; i++) { %>
-		<tr><td align="center"><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>      
+		<tr><td align="center"><a href="/quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>      
     <% } %>			
 	</table>
 	</div>
