@@ -29,12 +29,17 @@ app.use(function(req, res, next) {
 });
 
 // view engine set up
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+// view engine set up
 app.set('author', path.join(__dirname, 'author'));
 app.set('author engine', 'ejs');
 
-// view engine set up
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('buscar', path.join(__dirname, 'buscar'));
+app.set('buscar engine', 'ejs');
+
+
 
 // Partials
 app.use(partials());
@@ -59,6 +64,7 @@ app.get('/author', function(req, res){
 				+	'</body></html>'
 	res.send(html);
 });
+
 
 
 // catch 404 and forward to error handler
